@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Шифрование</title>
+    <script src="./vendors/AESexternal.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet" href="./vendors/style.css">
+  </head>
+
+  <body>
+    <div class="top">
+      <div class="radioboxes">
+        <input id="encrypt" type="radio" name="action" checked>
+        <label for="encrypt">
+          Шифр.
+        </label>
+        <input id="decrypt" type="radio" name="action">
+        <label for="decrypt">
+          Дешифр.
+        </label>
+      </div>
+      <select id="mode">
+        <option value="ECB">
+          ECB
+        </option>
+        <option value="CBC">
+          CBC
+        </option>
+        <option value="CFB">
+          CFB
+        </option>
+        <option value="OFB">
+          OFB
+        </option>
+        <option value="CTR">
+          Counter
+        </option>
+      </select>
+      <input id="number" type="number"
+             placeholder="Начальное значение для счетчика или размер сегмента"
+             value="8">
+      <input id="vector" type="text"
+             placeholder="Введите инициализирующий вектор"
+             value="1K1Axt6ujEoVTs2P">
+      <input id="key" type="text" placeholder="Введите ключ"
+             value="70bDC274028F3f391E398dF8e3977De6">
+    </div>
+    <div class="left">
+      <textarea id="text" cols="30" rows="10">ТекстДолжен16байт</textarea>
+    </div>
+    <div class="right"></div>
+
+    <div class="bottom">
+      <div id="error" class="error">Ошибок нет</div>
+    </div>
+
+    <script src="./modes.js"></script>
+    <script src="./vendors/ui.js"></script>
+  </body>
+
+</html>

@@ -1,0 +1,190 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  margin: 0;
+  padding: 0;
+
+  font-family: 'QuickSand', sans-serif;
+  font-size: 22px;
+
+  height: 100vh;
+}
+
+.left {
+  flex-basis: 50%;
+  flex-shrink: 0;
+  background-color: pink;
+}
+
+textarea {
+  display: block;
+  width: 100%;
+  height: 100vh;
+  padding: 20px;
+  padding-top: 70px;
+
+  font: inherit;
+
+  background-color: rgb(218, 211, 211);
+  border: none;
+  outline: none;
+  resize: none;
+}
+
+.right {
+  overflow: auto;
+  flex-basis: 50%;
+  flex-shrink: 0;
+  height: 100vh;
+  padding: 20px;
+  padding-top: 70px;
+
+  word-break: break-all;
+}
+
+select,
+#key,
+#vector,
+#number {
+  -webkit-appearance: none;
+
+  width: 200px;
+  padding: 10px 15px;
+
+  font: inherit;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+
+  background-color: #ccc;
+  border: none;
+  outline: none;
+
+  /* transform: translateX(-50%); */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+#mode {
+  margin-right: auto;
+  margin-left: 10px;
+}
+
+#key,
+#vector,
+#number {
+  margin-right: auto;
+  margin-left: 10px;
+}
+
+#vector {
+  background-color: #0cb;
+}
+
+#key {
+  background-color: #bc0;
+}
+
+
+#key,
+#vector,
+#number {
+  font-size: 12px;
+  min-width: 300px;
+}
+
+#number {
+  max-width: 100px;
+  min-width: 0px;
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  width: 100%;
+  padding: 0 15px;
+  top: 10px;
+}
+
+#mode {
+  /* position: absolute; */
+  top: 10px;
+  right: 0%;
+}
+
+#lang {
+  /* position: absolute; */
+  top: 10px;
+  left: 60%;
+}
+
+#key {
+  /* position: absolute; */
+  top: 10px;
+  left: 20%;
+
+  letter-spacing: 0.05em;
+}
+
+.radioboxes {
+  /* position: absolute; */
+  display: flex;
+  top: 10px;
+  left: 20%;
+}
+
+.radioboxes label {
+  display: block;
+  padding: 10px 15px;
+
+  font: inherit;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  background-color: #ccc;
+
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.radioboxes label {
+  margin-right: 15px;
+}
+
+input[type='radio'] {
+  display: none;
+}
+
+input:checked + label {
+  background-color: rgb(21, 43, 114);
+  color: #fff;
+}
+
+.bottom {
+  position: absolute;
+
+  bottom: 0;
+  left: 50%;
+
+  transform: translateX(-50%);
+}
+
+.error {
+  display: block;
+  width: 700px;
+  margin: 0 auto;
+  padding: 20px 30px;
+
+  font: inherit;
+  color: #fff;
+
+  background-color: rgb(21, 43, 114);
+  text-align: center;
+  border: none;
+  outline: none;
+
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
